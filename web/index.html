@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Schemas en JavaScript — Demo Interactiva</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Schemas en JavaScript</h1>
+      <p class="subtitle">Aprende los conceptos clave de JSON Schema con ejemplos ejecutables.</p>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <h2>Conceptos</h2>
+        <nav id="topics"></nav>
+        <div class="tips">
+          <strong>Tips</strong>
+          <ul>
+            <li>Modifica el Schema y los Datos, luego valida.</li>
+            <li>Usa Ctrl/Cmd + Enter para validar rápido.</li>
+            <li>El validador soporta un subconjunto útil de JSON Schema.</li>
+          </ul>
+        </div>
+      </aside>
+
+      <section class="workspace">
+        <div class="panes">
+          <div class="pane">
+            <div class="pane-header">Schema (JSON Schema)</div>
+            <textarea id="schema" spellcheck="false"></textarea>
+          </div>
+          <div class="pane">
+            <div class="pane-header">Datos (JSON)</div>
+            <textarea id="data" spellcheck="false"></textarea>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="validateBtn">Validar (Ctrl/Cmd + Enter)</button>
+          <span id="status" aria-live="polite"></span>
+        </div>
+
+        <section class="results" id="results"></section>
+
+        <details class="help">
+          <summary>¿Qué es un Schema?</summary>
+          <p>
+            Un schema describe la forma y restricciones de datos. Con <em>JSON Schema</em>
+            puedes especificar tipos, campos requeridos, límites, patrones y más. Esto ayuda a
+            validar entradas, documentar APIs y generar código.
+          </p>
+          <p>
+            Este demo incluye un validador ligero compatible con: <code>type</code>,
+            <code>properties</code>, <code>required</code>, <code>additionalProperties</code>,
+            <code>items</code>, <code>minItems</code>, <code>maxItems</code>, <code>enum</code>,
+            <code>const</code>, <code>minimum</code>, <code>maximum</code>,
+            <code>exclusiveMinimum</code>, <code>exclusiveMaximum</code>, <code>minLength</code>,
+            <code>maxLength</code>, <code>pattern</code>.
+          </p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span>Repositorio: SchemasEj — Demo educativa sin dependencias.</span>
+    </footer>
+
+    <script src="validator.js"></script>
+    <script src="examples.js"></script>
+    <script src="app.js"></script>
+  </body>
+  </html>
+
